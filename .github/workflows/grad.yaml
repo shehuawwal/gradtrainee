@@ -15,4 +15,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: check the files
         run: |
-          npm -v
+          docker build -t grad:1 .
+          docker tag grad:1 dockerhub.com/shehuawwal/reponame:1
+          docker images
