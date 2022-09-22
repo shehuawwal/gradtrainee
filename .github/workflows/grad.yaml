@@ -17,5 +17,5 @@ jobs:
         run: |
           echo $GITHUB_SHA
           docker build -t shehuawwal/gradtrainee:${GITHUB_SHA::4} .
-
-          docker images
+          docker login -u shehuawwal -p ${{ secrets.DOCKERTOKEN }}
+          docker push shehuawwal/gradtrainee:${GITHUB_SHA::4}
