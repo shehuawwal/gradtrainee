@@ -16,6 +16,6 @@ jobs:
       - name: check the files
         run: |
           echo $GITHUB_SHA
-          docker build -t shehuawwal/gradtrainee:${GITHUB_SHA::4} .
+          docker build -t shehuawwal/gradtrainee:${GITHUB_SHA::7} .
           docker login -u shehuawwal -p ${{ secrets.DOCKERTOKEN }}
-          docker push shehuawwal/gradtrainee:${GITHUB_SHA::4}
+          docker push shehuawwal/gradtrainee:${GITHUB_SHA::7}
